@@ -1,0 +1,6 @@
+module.exports = {
+  sitename: 'KeiVoteTester',
+  host: 'mc.keinett.us',
+  port: 8192,
+  pubkey: 'blah'
+}

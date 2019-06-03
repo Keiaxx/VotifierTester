@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+<p>Keinett Votifier Tester</p>
+
+<script>
+    function sendForm(){
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/");
+        xhr.onload = function(event){
+            alert("Vote submitted"); // raw response
+        };
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        // or onerror, onabort
+        var username = document.getElementById('username').value
+        console.log(username)
+        xhr.send(JSON.stringify({username}));
+    }
+</script>
+
+<form action="javascript:sendForm()" id="voteform">
+    Minecraft Username:<br>
+    <input type="text" id="username" value="Keiaxx">
+    <br>
+    <br>
+    <input type="submit" value="Submit Vote">
+</form>
